@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<h3>{{produit.name}}</h3>
+<h3>quantité : {{quantite}}</h3>
+<h3>prix :{{produit.prix}}€</h3>
+<a  href="{{ path('ecommerce') }}" class="btn btn-primary">Continuer les achats</a>
+<a  href="{{path('show_panier')}}" class="btn btn-primary">Panier</a>
+<a  href="{{path('ecommerce')}}" class="btn btn-primary">Passer la commande</a>
+
+
+{% endblock %}

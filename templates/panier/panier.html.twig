@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% set total = 0 %}
+
+<h1 class="text-center">Mon panier</h1>
+<hr>
+
+<form action="">
+    {% for article in panie.produit %}
+
+        <div class="card panier-element">
+            <h3>{{article.name}}</h3>
+            <h4>Quantité : {{quantite[article.id]}}</h4>
+            <h4>Prix : {{article.prix}} €</h4>
+            <h4>Total prix produit : {{article.prix * quantite[article.id] }} €</h4>
+                {% set total = total + article.prix * quantite[article.id]  %}
+        </div>
+
+    {% endfor %}
+
+    <hr>
+    <h3>Total panier : {{total}} €</h3>
+    <button class='btn btn-primary'>Commander</button>
+
+    <hr>
+</form>
+
+
+{% endblock %}

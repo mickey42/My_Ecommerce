@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="quizz_container">
+
+    <div class="row">
+        <div class="col-sm-7">
+            <img class="img-top" src="/img/{{produit.name|default('undefined')}}.jpg" alt="Card image cap" style="width: 100%">
+        </div>
+        <div class="col-sm-5">
+            <h1>{{ produit.name|default('undefined') }}</h1>
+            <hr>
+
+            <h4 class="description">{{produit.description|default('undefined')}}</h4>
+
+            <hr>
+
+            <h4 class="prix">Prix : <strong>{{produit.prix|default('undefined')}} €</strong></h4>
+            <form action="{{ path('addPanier', {id: produit.id })}}" class="questions">
+
+
+                <div class="form-group">
+                    <label for="number">Quantités :
+                        <input  type="number"  name="number" min="0" value="1" class="text-center">
+                    </label>
+                </div>
+
+
+                
+                <button type="submit" class="btn btn-info">Ajouter au panier</button>
+            </form>
+
+            <hr>
+            <div>
+                <p><strong>Vos avis :</strong></p>
+                {% for avis in avis %}
+                    <p>{{avis.userId}} : {{avis.commentaire}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

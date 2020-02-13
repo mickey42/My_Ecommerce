@@ -1,0 +1,55 @@
+body {
+    background-color: white;
+}
+.navbar-dark .navbar-nav .show>.nav-link, .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+    color : black !important;
+}
+.carousel-page
+{
+width:100%;
+height:400px;
+background-color:#5f666d;
+color:white;
+}
+.navbar-brand {
+    padding: 0 20 0 0;
+    height: auto ;
+}
+.navbar-brand img {
+    width: 130px;
+}
+.bg-primary {
+    background: #4099b3 !important;
+}
+.navbar-nav .nav-item {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+    color: #73dfff !important;
+}
+.card-product {
+    padding: 6px;
+    width: 25rem;
+}
+.card-product:hover {
+    background: #efefef;
+    transition: background .3s;
+    box-shadow: 0 10px 10px #999;
+}
+
+.panier-element {
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+.panier-element h3 {
+    margin-top: 0;
+    font-weight: bold;
+}
+.panier-element:hover {
+    background: #efefef;
+    transition: background .3s;
+    box-shadow: 0 10px 10px #999;
+}

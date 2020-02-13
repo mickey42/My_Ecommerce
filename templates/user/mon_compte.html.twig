@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<p>{{user.username}}</p>
+<p>{{user.email}}</p>
+<form action="">
+<input type="email">
+<button type="submit">Changer l'email</button>
+</form>
+<form action="{{path('update')}}">
+<input type="username">
+<button type="submit">Changer username</button>
+</form>
+{% endblock %}

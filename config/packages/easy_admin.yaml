@@ -1,0 +1,48 @@
+easy_admin:
+       
+    entities:
+        Produit:
+            class: App\Entity\Produit
+            form:
+                fields:
+                    - 'souscategorie'
+                    - 'name'
+                    - 'description'
+                    - 'prix'
+                    - 'stock'
+                    - 'photo'
+                    - 'video'
+
+        Promo:
+            class: App\Entity\Promo
+            form:
+                fields:
+                    - 'produit_id'
+                    - 'name'
+                    - 'description'
+                    - 'valeur'
+                    - 'date_debut'
+                    - 'date_fin'
+   
+        Categorie:
+            class: App\Entity\SousCategorie
+            form:
+                fields:
+                    - 'name'
+                    - 'categorieId'
+
+        User:
+            class: App\Entity\User
+            # encoders: { algorithm: 'auto' }
+            form:
+                fields:
+                    - { property: 'email', type: 'email'}
+                    - 'username'
+                    - 'role'
+                    # - { property: 'Password', type: 'repeated', type_options: { type: 'Symfony\Component\Form\Extension\Core\Type\PasswordType', first_options:  {label: 'Mot de passe' }, second_options: { label: 'Confirmer le mot de passe' }, invalid_message: 'Les deux mots de passe ne concordent pas.' }}
+                    
+        
+
+        # # List the entity class name you want to manage
+        # - App\Entity\Produit
+        # # - App\Entity\SousCategorie

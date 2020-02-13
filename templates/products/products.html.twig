@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello QuizzController!{% endblock %}
+
+{% block body %}
+<br>
+<div class="row justify-content-center">
+    
+    <h1>{{souscat.name}}</h1>
+</div>
+<div class="container">
+    
+    <div class="row justify-content-center">
+
+       {% for produit in produits %}
+           
+       <div class="card mt-4 mr-4 card-product">
+           <h5 class="card-title text-center"><strong>{{produit.name}}</strong></h5>
+           <img class="card-img-top" src="/img/{{produit.name}}.jpg" alt="Card image cap">
+           <div class="card-body">
+               <p class="card-text">{{produit.description}}</p>
+               <p class="card-text">Stock : {{produit.stock}}</p>
+               <p class="card-text">Prix : <strong>{{produit.prix}}</strong>€</p>
+               <a href="{{ path('produits_show', { id: produit.id })}}" class="btn btn-primary go">Voir plus</a>
+            </div>
+        </div>
+
+        {% endfor %}
+   
+            
+    </div>
+</div>
+
+
+{% endblock %}
